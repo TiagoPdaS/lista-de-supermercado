@@ -5,18 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
-        <h2>App Lista de SuperMercado</h2>
-    </header>
-    <div class="lista-cadastro">
-    <input type="text" placeholder="nome do produto..." name="nome do produto"/>
-    <input type="text" placeholder="valor do produto..." name="valor do produto"/>
-    <input type="submit" name="acao" value="Cadastrar"/>
-    </div>
-    
-<script>
+        <header>
+            <h2>App Lista de SuperMercado</h2>
+        </header>
+        <div class="lista-cadastro">
+            <input type="text" placeholder="nome do produto..."
+            name="nome_produto" />
+            <input type="number" name="price" placeholder="  valor" step="0.01"
+            title="This should be a number with up to 2 decimal places."/>
+        <div class="botao-cadastrar"> 
+            <input type="submit" name="acao" value="Cadastrar"/> 
+        </div> 
+        </div>
 
-</script>
+        <div class="lista-produtos">
+            
+
+        </div>
+
+        <div class="soma-produto">
+            <h1>Total: R$0</h1>
+        </div>
+        
+        <div class="b-limpar">
+        <button class="limpar" name="limpar">Limpar</button>
+        </div>
+
+    <script src="supermercado.js"></script>
+</body>
 </html>
