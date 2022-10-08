@@ -21,9 +21,12 @@ header{
     padding-left: 50px;
 }
 .botao-cadastrar{
-    padding:;
+    padding:0px 15px 0px 15px;
     font-size: 25px;
+    border:solid red;
     background-color: #5a71bb;
+
+    
     
 }
 .lista-produto-single{
@@ -48,18 +51,19 @@ h3.price-produto > span{
 }
 .soma-produto{
     margin:20px;
-    
+    padding:0px 0px 0px 40%;
 }
 
 .b-limpar{
     align-items: center;
+    padding:0px 0px 0px 45%;
 }
 
 .limpar{
-    align-items: center;
    margin: center;
    color: white;
    padding: 10px 10px 10px 10px;
    border-radius: 15px;
    background-color: #5a71bb;
+   
 }
