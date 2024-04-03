@@ -1,77 +1,97 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-header{
+
+header {
     background-color: #5a71bb;
     text-align: center;
-    color:white;
-    padding:20px 0;
+    color: white;
+    padding: 20px 0;
 }
 
-.lista-cadastro{
+.lista-cadastro {
     display: flex;
-    margin:20px 0;
-    padding:0 20px;
+    flex-direction: column; /* Alterado para empilhar os itens em coluna */
+    margin: 20px 0;
+    padding: 0 10px; /* Alterado para se ajustar melhor em telas menores */
 }
-.lista-cadastro input[type=text]{
-    flex:1;
-    height:40px;
-    padding-left: 50px;
-    
+
+.lista-cadastro input[type=text] {
+    flex: 1;
+    height: 40px;
+    margin-bottom: 10px; /* Adicionado espaço entre os inputs */
 }
-.botao-cadastrar{
-    padding:0px 15px 0px 15px;
-    font-size: 30px;
-    border:solid rgb(153, 153, white) ;
+
+.botao-cadastrar {
+    padding: 10px 15px; /* Ajustado tamanho do botão */
+    font-size: 20px; /* Reduzido o tamanho da fonte */
+    border: solid rgb(153, 153, white);
     background-color: #5a71bb;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.lista-produto-single{
-    padding:10px 10px;
-    margin:20px 0;
-    border-bottom:1px solid #ccc;
+.lista-produto-single {
+    padding: 10px;
+    margin: 20px 0;
+    border-bottom: 1px solid #ccc;
     display: flex;
+    flex-direction: column; /* Alterado para empilhar os itens em coluna */
 }
-.lista-produto-single h3{
-    flex:1;
-    padding:0 120px;
+
+.lista-produto-single h3 {
+    flex: 1;
+    padding: 0;
 }
-h3.price-produto{
+
+h3.price-produto {
     text-align: right;
-    font-size: 17px;
-}
-h3.price-produto > span{
-    background-color: #5a71bb;
-    padding:8px 10px;
-    border-radius:20px;
-    color:white;
-}
-.soma-produto{
-    margin:20px;
-    padding:0px 0px 0px 40%;
+    font-size: 14px; /* Reduzido o tamanho da fonte */
 }
 
-.remove-item{
+h3.price-produto > span {
+    background-color: #5a71bb;
+    padding: 6px 8px; /* Ajustado o padding */
+    border-radius: 20px;
+    color: white;
+}
+
+.soma-produto {
+    margin: 20px;
+    text-align: center; /* Centralizado o texto */
+}
+
+.remove-item {
     padding: 5px;
     background-color: rgb(242, 192, 192);
     cursor: pointer;
-    margin-right: 50px;
+    margin-bottom: 10px; /* Adicionado espaço entre os botões */
     border-radius: 10px;
 }
 
-.b-limpar{
-    align-items: center;
-    padding:0px 0px 0px 42%;
+.b-limpar {
+    text-align: center; /* Centralizado o texto */
 }
 
-.limpar{
-   margin: center;
-   color: white;
-   padding: 10px 10px 10px 10px;
-   border-radius: 15px;
-   background-color: #5a71bb;
-   
+.limpar {
+    color: white;
+    padding: 10px 20px; /* Ajustado o padding */
+    border-radius: 15px;
+    background-color: #5a71bb;
+}
+
+/* Media Query para dispositivos com largura máxima de 600px (modo mobile) */
+@media only screen and (max-width: 600px) {
+    .lista-produto-single h3 {
+        padding: 0 20px; /* Ajustado o padding para melhorar o espaçamento */
+    }
+
+    .soma-produto {
+        padding: 0 10px; /* Ajustado o padding */
+    }
+
+    .b-limpar {
+        padding: 0; /* Removido o padding */
+    }
 }
