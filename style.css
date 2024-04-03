@@ -99,6 +99,7 @@ h3.price-produto > span {
     }
 
     h3.price-produto > span {
+        margin-bottom: 10px;
         padding: 4px 6px; /* Ajustar o padding do preço */
         font-size: 12px; /* Reduzir o tamanho da fonte do preço */
     }
