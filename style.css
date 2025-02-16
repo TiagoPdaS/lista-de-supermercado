@@ -13,38 +13,44 @@ header {
 
 .lista-cadastro {
     display: flex;
-    flex-direction: column; /* Empilhar os itens em coluna */
-    margin: 20px 0;
-    padding: 0 10px; /* Adicionar um pequeno padding horizontal */
+    justify-content:center;
+    margin: 10px;
+    padding: 10px 20px; 
+    height: 60px;
 }
 
 .lista-cadastro input[type=text] {
-    height: 40px;
-    margin-bottom: 10px; /* Adicionar espaço entre os inputs */
-    padding: 0 10px; /* Adicionar um pequeno padding horizontal */
+    height: 40px; 
+    padding: 0 10px;
+ 
 }
 
 .botao-cadastrar {
-    padding: 10px 15px;
+    padding: 10px ;
     font-size: 20px;
     border: solid rgb(153, 153, white);
     background-color: #5a71bb;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .lista-produto-single {
-    padding: 10px;
-    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 20px 150px;
     border-bottom: 1px solid #ccc;
 }
 
 .lista-produto-single h3 {
-    padding: 0;
-    margin-bottom: 10px; /* Adicionar espaço entre os itens */
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 h3.price-produto {
-    text-align: right;
+    display: flex;
+    align-items: end;
     font-size: 14px;
 }
 
