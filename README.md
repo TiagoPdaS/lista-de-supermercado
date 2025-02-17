@@ -1,3 +1,2 @@
 # lista-de-supermercado
- 
-![Captura de tela 2024-04-02 211054](https://github.com/TiagoPdaS/lista-de-supermercado/assets/77899501/4e89228d-89b1-4db7-9bd7-0f51565c1a0a)
+ ![lista super mercado](https://github.com/user-attachments/assets/2e28af84-c774-44d4-8374-4649fcb7d0b8)
