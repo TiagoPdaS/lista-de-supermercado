@@ -1,0 +1,16 @@
+{
+  "name": "lista-de-supermercado",
+  "version": "1.0.0",
+  "description": "Projeto de lista de supermercado",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
