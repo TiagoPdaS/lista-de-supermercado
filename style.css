@@ -13,20 +13,30 @@ header {
 
 .lista-cadastro {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     margin: 10px;
     padding: 10px 20px; 
     height: 60px;
+    margin-top: 45px; /* Adicionar espaço entre o cabeçalho e os campos de entrada */
+}
+
+.lista-cadastro input[type=text],
+.lista-cadastro input[type=number],
+.lista-cadastro .botao-cadastrar {
+    margin-right: 10px;
+}
+
+.lista-cadastro input[type=number] {
+    margin-left: 10px;
 }
 
 .lista-cadastro input[type=text] {
     height: 40px; 
     padding: 0 10px;
- 
 }
 
 .botao-cadastrar {
-    padding: 10px ;
+    padding: 10px;
     font-size: 20px;
     border: solid rgb(153, 153, white);
     background-color: #5a71bb;
@@ -41,17 +51,20 @@ header {
     padding: 5px;
     margin: 20px 150px;
     border-bottom: 1px solid #ccc;
+    flex-wrap: wrap; /* Permitir quebra de linha para melhor alinhamento */
 }
 
 .lista-produto-single h3 {
     padding: 10px;
     margin-bottom: 10px;
+    flex: 1; /* Permitir que o nome do produto ocupe o espaço disponível */
 }
 
 h3.price-produto {
     display: flex;
-    align-items: end;
+    align-items: center;
     font-size: 14px;
+    margin-right: 10px; /* Adicionar espaço entre o preço e o botão de remover */
 }
 
 h3.price-produto > span {
@@ -64,6 +77,8 @@ h3.price-produto > span {
 .soma-produto {
     margin: 20px;
     text-align: center;
+    clear: both; /* Garantir que a exibição do total não se sobreponha a outros elementos */
+    margin-top: 40px; /* Adicionar espaço acima da exibição do total */
 }
 
 .remove-item {
@@ -72,6 +87,7 @@ h3.price-produto > span {
     cursor: pointer;
     margin-bottom: 10px;
     border-radius: 10px;
+    flex-shrink: 0; /* Impedir que o botão encolha */
 }
 
 .b-limpar {
@@ -85,28 +101,69 @@ h3.price-produto > span {
     background-color: #5a71bb;
 }
 
+.lista-produtos {
+    margin-top: 40px; /* Adicionar espaço entre a lista de produtos e o botão de cadastrar */
+}
+
 /* Media Query para dispositivos com largura máxima de 600px (modo mobile) */
 @media only screen and (max-width: 600px) {
-    .lista-cadastro input[type=text] {
-        margin-bottom: 10px; /* Ajustar o espaço entre os inputs */
+    .lista-cadastro {
+        flex-direction: column;
+        margin-top: 80px;
+    }
+
+    .lista-cadastro input[type=text],
+    .lista-cadastro input[type=number],
+    .lista-cadastro .botao-cadastrar {
+        margin-bottom: 10px;
+        padding: 10px; /* Garantir o mesmo padding para ambos os campos de entrada */
+       /* Garantir a mesma largura para ambos os campos de entrada e botão */
+    }
+
+    .lista-cadastro input[type=text],
+    .lista-cadastro input[type=number] {
+        padding: 10px;
+        margin: 7px; /* Garantir a mesma margem para ambos os campos de entrada */
     }
 
     .botao-cadastrar {
-        font-size: 18px; /* Reduzir o tamanho da fonte do botão */
+        text-align: center;
+        font-size: 15px; /* Reduzir o tamanho da fonte do botão */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: #5a71bb;
+        border: none;
+        width: 100%; /* Garantir que o botão ocupe toda a largura disponível */
+        
+    }
+
+    .lista-produto-single {
+        flex-direction: row; /* Alinhar os itens lado a lado */
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap; /* Impedir quebra de linha */
     }
 
     .lista-produto-single h3 {
         font-size: 16px; /* Reduzir o tamanho da fonte dos itens */
+        flex: 1; /* Permitir que o nome do produto ocupe o espaço disponível */
     }
 
     h3.price-produto {
-        margin-bottom: 10px;
+        margin-bottom: 0;
         font-size: 12px; /* Reduzir o tamanho da fonte do preço */
+        margin-right: 10px; /* Adicionar espaço entre o preço e o botão de remover */
     }
 
     h3.price-produto > span {
-        margin-bottom: 10px;
+        margin-bottom: 0;
         padding: 4px 6px; /* Ajustar o padding do preço */
         font-size: 12px; /* Reduzir o tamanho da fonte do preço */
+    }
+
+    .remove-item {
+        margin-bottom: 0;
+        flex-shrink: 0; /* Impedir que o botão encolha */
     }
 }
